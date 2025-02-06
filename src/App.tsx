@@ -37,7 +37,11 @@ export default function Page() {
     <div className="-mt-16 flex h-screen flex-col items-center justify-center">
       {yesPressed ? (
         <>
-          <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
+          <img
+            className="max-w-full h-auto"
+            src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif"
+            alt="Bear Kiss"
+          />
           <div className="my-4 text-4xl font-bold">
             WOOOOOO!!! I love you pookie!! ;))
           </div>
@@ -45,11 +49,12 @@ export default function Page() {
       ) : (
         <>
           <img
-            className="h-[200px]"
+            className="h-[200px] max-w-full h-auto"
             src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
+            alt="Cute Love Bear"
           />
           <h1 className="my-4 text-4xl">Will you be my Valentine?</h1>
-          <div className="flex items-center">
+          <div className="flex items-center flex-col md:flex-row">
             <button
               className={`mr-4 rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700`}
               style={{ fontSize: yesButtonSize }}
@@ -59,7 +64,7 @@ export default function Page() {
             </button>
             <button
               onClick={handleNoClick}
-              className=" rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
+              className="rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
             >
               {noCount === 0 ? "No" : getNoButtonText()}
             </button>
