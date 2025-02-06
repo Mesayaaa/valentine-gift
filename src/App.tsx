@@ -4,6 +4,7 @@ import { useState } from "react";
 export default function Page() {
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
+  const [open, setOpen] = useState(false);
   const yesButtonSize = noCount * 20 + 16;
 
   const handleNoClick = () => {
@@ -51,12 +52,47 @@ export default function Page() {
             <span>WOKEEEH LOVE U SAYANG, OIYA WAIT MAS PUNYA INI!!</span>
           </div>
           <div>
-            <button
-              onClick={() => (window.location.href = "/another-page")}
-              className="mt-4 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
-            >
-              Go to Another Page
-            </button>
+            <div className="relative inline-block text-left">
+              <div>
+                <button
+                  type="button"
+                  className="mt-4 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+                  onClick={() => setOpen((prev) => !prev)}
+                >
+                  Pilih Tujuan
+                </button>
+              </div>
+
+              {open && (
+                <div className="absolute left-1/2 transform -translate-x-1/2 z-10 mt-2 w-auto rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                  <div
+                    className="py-1 text-center"
+                    role="menu"
+                    aria-orientation="vertical"
+                    aria-labelledby="options-menu"
+                  >
+                    <button
+                      onClick={() => alert("Kita akan pergi ke Bandung!")}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      Bandung
+                    </button>
+                    <button
+                      onClick={() => alert("Kita akan pergi ke Surabaya!")}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      Surabaya
+                    </button>
+                    <button
+                      onClick={() => alert("Kita akan pergi ke Jakarta!")}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      Jakarta
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </>
       ) : (
