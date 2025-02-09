@@ -34,18 +34,18 @@ export default function Page() {
       "mau yaa?",
       "Voulez-vous?",
       "你想要_____吗？",
-      "sayang :(",
+      "mas sedi :(",
     ];
 
     return phrases[Math.min(noCount, phrases.length - 1)];
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen p-0 bg-gradient-to-r from-pink-500 to-yellow-500">
+    <div className="flex flex-col items-center justify-center h-screen p-0 bg-white">
       {yesPressed ? (
         <>
           <div>
-            <span className="text-sm animate-bounce text-white">
+            <span className="text-sm animate-bounce text-black">
               Susahnya dapet stiker ini sayang alamakkk
             </span>
           </div>
@@ -54,7 +54,7 @@ export default function Page() {
             src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif"
             alt="Bear Kiss"
           />
-          <div className="my-4 text-2xl md:text-4xl font-bold text-center text-white">
+          <div className="my-4 text-2xl md:text-4xl font-bold text-center text-black">
             <span>WOKEEEH LOVE U SAYANG, OIYA WAIT MAS PUNYA INI!!</span>
           </div>
           <div>
@@ -63,9 +63,12 @@ export default function Page() {
                 <button
                   type="button"
                   className="mt-4 rounded bg-blue-600 px-4 py-2 font-bold text-white hover:bg-blue-800 transition duration-300 transform hover:scale-105"
-                  onClick={() => setOpen((prev) => !prev)}
+                  onClick={() =>
+                    (window.location.href =
+                      "https://mesayaaa.github.io/image-slider/")
+                  }
                 >
-                  Tur kita sayang, oiya btw pencet ini cantikkk
+                  pencet deh sayang
                 </button>
               </div>
 
@@ -97,7 +100,7 @@ export default function Page() {
                         </button>
                       </div>
                     </div>
-                    <span className="block text-lg px-4 py-2 text-sm text-center">
+                    <span className="block text-lg px-4 py-2 text-sm text-black">
                       see u sayang!!! &lt;3
                     </span>
                   </div>
@@ -109,11 +112,11 @@ export default function Page() {
       ) : (
         <div className="flex flex-col items-center justify-center">
           <img
-            className="h-[200px] max-w-full h-auto transition-transform transform hover:scale-110"
+            className="h-[200px] max-w-full h-auto transition-transform transform hover:scale-80"
             src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
             alt="Cute Love Bear"
           />
-          <h1 className="my-4 text-2xl md:text-4xl text-center text-white">
+          <h1 className="my-4 text-2xl md:text-4xl text-center text-black">
             Km mau pergi sama mas nda?
           </h1>
           <div className="flex flex-col md:flex-row items-center justify-center">
