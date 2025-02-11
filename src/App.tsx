@@ -32,24 +32,29 @@ export default function Page() {
 
   const getNoButtonText = () => {
     const phrases = [
-      "ga",
-      "yakin sayang?",
+      "gaaa",
+      "beneran?",
       "km nda mau pergi sama mas?",
-      "mas sedih loh ini sayang",
+      "mas kangen ketemu km",
       "kita pergii yuuu",
       "nantii kita beli es krim",
-      "belii yang km mau jugaa",
+      "hari ini mas yang beliin km",
+      "boleee semua",
+      "ato",
       "belii kue kesukaan kita",
       "CATHERAISE",
-      "ayuuu kita nyobain bu yudi",
-      "ayuuu kita ke taman",
-      "mas kangen",
+      "ayuuu kita nyobain bu yudi WKWKWKWK",
+      "mas masi belum kesampean sampe skarang alamak",
+      "apaa kita gass ke tamann??",
+      "mas sih udaa ada tempatnya",
+      "mas pengen bgttt",
+      "kangen.",
       "sama km",
       "hehe",
       "mau yaa?",
       "Voulez-vous?",
       "你想要_____吗？",
-      "mas sedi :(",
+      "AYUUU KITAA GASSS SAYANG",
     ];
 
     return phrases[Math.min(noCount, phrases.length - 1)];
@@ -58,7 +63,15 @@ export default function Page() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-white overflow-hidden">
       {yesPressed && (
-        <ReactConfetti width={windowSize.width} height={windowSize.height} />
+        <ReactConfetti
+          width={windowSize.width}
+          height={windowSize.height}
+          numberOfPieces={200}
+          recycle={false}
+          gravity={0.3}
+          initialVelocityY={10}
+          tweenDuration={5000}
+        />
       )}
 
       {yesPressed ? (
@@ -78,13 +91,21 @@ export default function Page() {
           </div>
           <button
             type="button"
-            className="mt-4 rounded-full bg-blue-600 px-6 py-3 font-bold text-white hover:bg-blue-800 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+            className="mt-4 rounded-full bg-gradient-to-r from-rose-400 via-red-400 to-red-500
+                       px-8 py-4 font-bold text-white 
+                       transition-all duration-500 
+                       hover:from-red-500 hover:via-red-400 hover:to-rose-400
+                       hover:scale-110 hover:shadow-2xl
+                       active:scale-95
+                       flex items-center gap-2
+                       shadow-lg"
             onClick={() =>
               (window.location.href =
                 "https://mesayaaa.github.io/travel-places/")
             }
           >
-            pencet deh sayang ❤️
+            <span className="text-lg">pencet deh sayang</span>
+            <span className="animate-bounce">❤️</span>
           </button>
         </>
       ) : (
@@ -95,7 +116,7 @@ export default function Page() {
             alt="Cute Love Bear"
           />
           <h1 className="my-4 text-2xl md:text-4xl text-center text-black font-bold">
-            Km mau pergi sama mas nda? 🥺
+            Km mau pergi sama mas nda?
           </h1>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <button
@@ -112,7 +133,7 @@ export default function Page() {
               onClick={handleNoClick}
               className="transform transition-all duration-300 hover:scale-105 rounded-full bg-red-600 px-8 py-3 font-bold text-white hover:bg-red-800 hover:shadow-xl"
             >
-              {noCount === 0 ? "ga" : getNoButtonText()}
+              {noCount === 0 ? "gaaa" : getNoButtonText()}
             </button>
           </div>
         </div>
