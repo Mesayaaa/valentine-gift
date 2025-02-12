@@ -73,9 +73,9 @@ export default function MainPage() {
 
       {yesPressed ? (
         <>
-          <div className="animate-bounce">
-            <span className="text-sm text-black">
-              Susahnya dapet stiker ini sayang alamakkk
+          <div>
+            <span className="text-xs text-black italic">
+              *susahnya dapet stiker ini sayang alamakkk
             </span>
           </div>
           <img
@@ -83,27 +83,33 @@ export default function MainPage() {
             src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif"
             alt="Bear Kiss"
           />
-          <div className="my-4 text-2xl md:text-4xl font-bold text-center text-black animate-pulse">
-            <span>WKWKWKWKW LOVE U SAYANG</span>
+          <div className="my-4 text-2xl md:text-4xl font-bold text-center bg-gradient-to-r from-pink-500 via-red-500 to-rose-500 bg-clip-text text-transparent animate-pulse">
+            <span>WKWKWKWKW</span>
             <br />
+            <span>LOVE U SAYANGKU CINTAKU</span>
           </div>
           <button
             type="button"
             className="mt-4 rounded-full bg-gradient-to-r from-rose-400 via-red-400 to-red-500
                        px-8 py-4 font-bold text-white 
-                       transition-all duration-500 
-                       hover:from-red-500 hover:via-red-400 hover:to-rose-400
-                       hover:scale-110 hover:shadow-2xl
-                       active:scale-95
-                       flex items-center gap-2
-                       shadow-lg"
+                       transition-all duration-700 ease-in-out
+                       hover:from-red-500 hover:via-pink-400 hover:to-rose-400
+                       hover:scale-110 hover:shadow-2xl hover:rotate-1
+                       active:scale-95 active:shadow-inner
+                       focus:outline-none focus:ring-4 focus:ring-red-300
+                       flex items-center gap-3
+                       shadow-lg relative
+                       group"
             onClick={() =>
               (window.location.href =
                 "https://mesayaaa.github.io/travel-places/")
             }
           >
-            <span className="text-lg">pencet deh sayang</span>
-            <span className="animate-bounce">❤️</span>
+            <span className="text-lg group-hover:tracking-wider transition-all duration-500">
+              pencet deh sayang
+            </span>
+            <span className="animate-bounce group-hover:animate-ping">❤️</span>
+            <div className="absolute -inset-1 bg-gradient-to-r from-rose-400 via-red-400 to-red-500 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-700"></div>
           </button>
         </>
       ) : (
