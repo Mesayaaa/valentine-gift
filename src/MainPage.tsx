@@ -140,6 +140,10 @@ export default function MainPage() {
             >
               {getNoButtonText()}
             </button>
+
+            <p className="w-full text-center mt-4 text-sm text-gray-500 italic">
+              *note: km inget gaa besok hari apaa?
+            </p>
           </div>
         </>
       )}
