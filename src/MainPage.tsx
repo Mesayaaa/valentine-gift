@@ -84,7 +84,7 @@ export default function MainPage() {
             alt="Bear Kiss"
           />
           <div className="my-4 text-2xl md:text-4xl font-bold text-center text-black animate-pulse">
-            <span>WOKEEEH LOVE U SAYANG</span>
+            <span>WKWKWKWKW LOVE U SAYANG</span>
             <br />
           </div>
           <button
