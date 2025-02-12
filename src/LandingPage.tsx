@@ -61,7 +61,7 @@ export default function LandingPage({ isLoading }: { isLoading: boolean }) {
               sx={{
                 fontWeight: "bold",
                 marginBottom: 2,
-                background: "linear-gradient(45deg, #FF69B4, #FF1493)",
+                background: "linear-gradient(45deg, #ff6969, #ff5f5f)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -90,7 +90,7 @@ export default function LandingPage({ isLoading }: { isLoading: boolean }) {
             >
               <CircularProgress
                 sx={{
-                  color: "#FF69B4",
+                  color: "#ff5f5f",
                 }}
               />
             </motion.div>

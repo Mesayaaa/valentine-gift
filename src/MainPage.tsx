@@ -107,28 +107,48 @@ export default function MainPage() {
             </motion.div>
             <button
               type="button"
-              className="mt-4 rounded-full bg-gradient-to-r from-rose-400 via-red-400 to-red-500
-                         px-8 py-4 font-bold text-white 
+              onClick={() => {
+                setTimeout(() => {
+                  window.location.href =
+                    "https://mesayaaa.github.io/travel-places/";
+                }, 1200);
+              }}
+              className="mt-4 rounded-full bg-white
+                         font-bold text-rose-500 
+                         relative overflow-hidden
                          transition-all duration-700 ease-in-out
-                         hover:from-red-500 hover:via-pink-400 hover:to-rose-400
-                         hover:scale-110 hover:shadow-2xl hover:rotate-1
-                         active:scale-95 active:shadow-inner
-                         focus:outline-none focus:ring-4 focus:ring-red-300
-                         flex items-center gap-3
-                         shadow-lg relative
-                         group"
-              onClick={() =>
-                (window.location.href =
-                  "https://mesayaaa.github.io/travel-places/")
-              }
+                         transform hover:-translate-y-1
+                         hover:shadow-[0_0_30px_-5px_rgba(251,113,133,0.6)]
+                         active:translate-y-0.5 active:shadow-inner
+                         focus:outline-none focus:ring-4 focus:ring-rose-300
+                         flex items-center justify-center gap-3
+                         group
+                         px-6 py-2
+                         md:px-10 md:py-5
+                         border-2 border-rose-400
+                         before:absolute before:inset-0
+                         before:bg-gradient-to-r before:from-rose-400 before:via-red-400 before:to-red-500
+                         before:translate-x-[-100%] before:hover:translate-x-0
+                         before:transition-transform before:duration-700
+                         before:z-[-1]"
             >
-              <span className="text-lg group-hover:tracking-wider transition-all duration-500">
+              <span
+                className="text-base md:text-xl font-semibold
+                             relative z-10 group-hover:text-white
+                             transition-all duration-500
+                             group-hover:tracking-wider"
+              >
                 pencet deh sayang
               </span>
-              <span className="animate-bounce group-hover:animate-ping">
+              <span className="relative z-10 animate-bounce group-hover:animate-ping">
                 ❤️
               </span>
-              <div className="absolute -inset-1 bg-gradient-to-r from-rose-400 via-red-400 to-red-500 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-700"></div>
+              <div
+                className="absolute top-0 left-0 w-full h-full bg-gradient-to-r 
+                            from-rose-400/20 via-red-400/20 to-red-500/20 
+                            rounded-full blur-xl group-hover:opacity-75 
+                            transition-opacity duration-500"
+              ></div>
             </button>
           </motion.div>
         ) : (
