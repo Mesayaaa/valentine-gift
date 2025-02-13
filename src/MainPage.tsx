@@ -26,7 +26,6 @@ export default function MainPage() {
       "beneran?",
       "yakin sayang?",
       "km nda mau pergi sama mas?",
-      "jangan gitu:(",
       "mas kangen ketemu km",
       "kita pergii yuuu",
       "nantii kita beli es krim",
@@ -174,7 +173,7 @@ export default function MainPage() {
               Sayang...
               <br />
               <span className="text-xl md:text-3xl block mt-2">
-                mas bolee minta satu hari besok buat pergi sama mas nda?
+                mas bolee minta satu hari ini buat pergi sama mas nda?
               </span>
             </motion.h1>
             <motion.img
@@ -195,7 +194,7 @@ export default function MainPage() {
                 style={{ fontSize: yesButtonSize }}
                 onClick={handleYesClick}
               >
-                Yes
+                mauu
               </button>
               <button
                 onClick={handleNoClick}
@@ -205,7 +204,7 @@ export default function MainPage() {
               </button>
 
               <p className="w-full text-center mt-4 text-sm text-gray-500 italic">
-                *note: km inget gaa besok hari apaa?
+                *note: km inget gaa hari ini hari apa
               </p>
             </motion.div>
           </motion.div>
