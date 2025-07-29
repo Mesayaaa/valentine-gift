@@ -108,8 +108,7 @@ export default function MainPage() {
               type="button"
               onClick={() => {
                 setTimeout(() => {
-                  window.location.href =
-                    "https://mesayaaa.github.io/travel-places/";
+                  window.location.href = "/";
                 }, 1200);
               }}
               className="mt-4 rounded-full bg-white
